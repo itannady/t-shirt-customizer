@@ -16,3 +16,9 @@ else {
     out.innerHTML = text.value;
 }
 }
+
+// 1. When user selects a different font in the dropdown, change the t-shirt font to that font.
+//     1. Use [onchange](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event) event to detect change in the dropdown and slider.
+
+const font = document.querySelector('.fontOptions');
+
