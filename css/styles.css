@@ -1,0 +1,25 @@
+.header{
+    display: flex;
+    height: 10vh;
+    justify-content: center;
+    font-size: 4em;
+}
+
+img{
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  height: 100%;
+}
+#shopcart{
+    border: 1px solid black;
+}
+
+#total{
+    display: flex;
+    justify-content: space-between;
+}
+
+#fontsize{
+    padding: 10px;
+}

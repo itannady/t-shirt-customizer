@@ -14,6 +14,69 @@
 </head>
 
 <body>
+    <div class="header"> T shirt maker</div>
+
+    <hr>
+<!-- rows -->
+    <div class="container">
+        <div class="row">
+          <div class="col-sm" id="img1">
+            <img src="/img/shirtgroup.jpg" alt="t-shirt">
+            
+          </div>
+          <div class="col-sm">
+            <h1>Customize T-shirt</h1>
+            <p>Text to put on t-shirt</p>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <p>max 20 characters</p>
+
+            <h4>Choose font size:</h4>
+            <!-- add font size -->
+            <label for="customRange2" class="form-label" id="fontsize">
+            </label>
+            <input type="range" class="form-range" min="0" max="100" id="customRange2">
+            
+<br><br><br>
+
+<h4>Choose text color:</h4>
+<button type="button" class="btn btn-dark"></button>
+<button type="button" class="btn btn-primary"></button>
+<button type="button" class="btn btn-success"></button>
+<button type="button" class="btn btn-danger"></button>
+
+<br><br><br>
+
+<!-- add to cart -->
+
+<button type="button" class="btn btn-primary btn-lg">Add to cart</button>
+<button type="button" class="btn btn-danger btn-lg">Remove from Cart</button>
+          </div>
+
+          <!-- Shopping Cart -->
+
+          <div class="col-sm" id="shopcart">
+            <h2>Shopping cart</h2>
+            <h4>Cart is empty</h4>
+
+<br><br><br>
+<div id="total">
+    <p>Subtotal:</p>
+    <p>$0.00</p>
+</div>
+<div id="total">
+    <p>Tax:</p>
+    <p>$0.00</p>
     
+</div>
+<div id="total">
+    <p>Total:</p>
+    <p>$0.00</p>
+    
+</div>
+
+
+          </div>
+        </div>
+      </div>
 </body>
 </html>
