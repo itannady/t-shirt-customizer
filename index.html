@@ -32,6 +32,18 @@
 
             <h4>Choose font size:</h4>
             <!-- add font size -->
+            <div class="dropdown ">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <p>Font Types</p>
+              </button>
+              <div class="dropdown-menu fontOptions" aria-labelledby="dropdownMenuButton">
+                <a id = "monospace" class="dropdown-item" href="#">Monospace</a>
+                <a id = "times" class="dropdown-item" href="#">Times New Roman</a>
+                <a id ="arial" class="dropdown-item" href="#">Arial</a>
+              </div>
+            </div>
+
+
             <label for="customRange2" class="form-label" id="fontsize">
             </label>
             <input type="range" class="form-range" min="0" max="100" id="customRange2">
