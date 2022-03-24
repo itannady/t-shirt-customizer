@@ -23,3 +23,9 @@ img{
 #fontsize{
     padding: 10px;
 }
+
+#img1{
+    background-image: url(/img/shirtgroup.jpg);
+ background-repeat: no-repeat;
+ background-size: cover;
+}
