@@ -21,7 +21,11 @@
     <div class="container">
         <div class="row">
           <div class="col-sm" id="img1">
-            <div id="tshirt-preview"></div>
+            <div class="shirt-wrapper">
+            <div id="tshirt-preview" class="output-text"></div>
+            <img id="shirt" src="/img/shirtgroup.jpg" alt="">
+            </div>
+            
             
           </div>
           <div class="col-sm">
@@ -30,31 +34,26 @@
             <input type="text" class="form-control" id="userText" placeholder="Enter text" max="20" oninput="displayText()">  
             <p class="maxNum">max 20 characters</p>
 
-            <h4>Choose font size:</h4>
-            <!-- add font size -->
-            <div class="dropdown ">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <p>Font Types</p>
-              </button>
-              <div class="dropdown-menu fontOptions" aria-labelledby="dropdownMenuButton">
-                <a id = "monospace" class="dropdown-item" href="#">Monospace</a>
-                <a id = "times" class="dropdown-item" href="#">Times New Roman</a>
-                <a id ="arial" class="dropdown-item" href="#">Arial</a>
-              </div>
-            </div>
-
-
-            <label for="customRange2" class="form-label" id="fontsize">
+            <label>Choose a font:
+              <select id="input-font" class="fontOptions" name="font" onchange="changeFontStyle (this);">
+                <option value="Arial" selected="selected">Arial</option>
+                <option value="Monospace">Monospace</option>
+                <option value="Times New Roman">Times New Roman</option>
+            
+              </select>
             </label>
-            <input type="range" class="form-range" min="0" max="100" id="customRange2">
+
+             <!-- add font size -->
+            <h4>Choose font size:</h4>
+            <input type="range" class="form-range" min="12" max="36" step="0.1" value ="2.0" id="customRange">
             
 <br><br><br>
 
 <h4>Choose text color:</h4>
-<button type="button" class="btn btn-dark"></button>
-<button type="button" class="btn btn-primary"></button>
-<button type="button" class="btn btn-success"></button>
-<button type="button" class="btn btn-danger"></button>
+<button type="button" class="btn btn-dark black" onclick="onClick()"></button>
+<button type="button" class="btn btn-primary blue" onclick="onClick()"></button>
+<button type="button" class="btn btn-success green" onclick="onClick()"></button>
+<button type="button" class="btn btn-danger red" onclick="onClick()"></button>
 
 <br><br><br>
 

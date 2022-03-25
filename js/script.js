@@ -20,5 +20,35 @@ else {
 // 1. When user selects a different font in the dropdown, change the t-shirt font to that font.
 //     1. Use [onchange](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event) event to detect change in the dropdown and slider.
 
-const font = document.querySelector('.fontOptions');
+// const font = document.querySelector('.fontOptions');
+
+// font.addEventListener('change', (event)) 
+
+let changeFontStyle = function (font) {
+    document.querySelector(".output-text").style.fontFamily = font.value;
+}
+//2  To get the font size to change we declared the font 
+
+let range = document.querySelector('#customRange');
+let shirtText = document.querySelector(".output-text");
+
+range.addEventListener("input", function() {
+    shirtText.style["font-size"] = this.value + "px";
+
+});
+
+let black = document.querySelector(".black");
+let blue = document.querySelector(".blue");
+let green = document.querySelector(".green");
+let red = document.querySelector(".red");
+
+black.addEventListener('click',function onClick(){
+shirtText.style.color= 'black'
+;
+});
+
+blue.addEventListener('click',function onClick(){
+    shirtText.style.color= 'blue'
+    ;
+    });
 
