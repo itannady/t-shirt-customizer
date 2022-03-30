@@ -64,16 +64,27 @@ green.addEventListener('click',function onClick(){
 //Show red error message below Add to Cart button and add .is-invalid class around teh text input to display a red border around it
 //Do not update shopping cart if rules are not met
 
- let subtotal = 25;
- let tax = 5;
- let total = 0; 
+ let subtotal = document.getElementById('subtotal').innerHTML;
+ let tax = document.getElementById('tax').getAttribute('data-tax');
+ let total = document.getElementById('total').innerHTML; 
+ let price = document.getElementById('price').innerHTML
 
- document.getElementById('cart_button').onclick= function() {
-      addCart(Number(document.getElementById('subtotal').innerHTML))
- }
+//  document.getElementById('cart_button').onclick= function() {
+//       addCart(Number(document.getElementById('subtotal').innerHTML))
+//  }
 
+ //cart_button.getAttribute('data-price')
+        document.getElementById('cart_button').onclick =   function () {
+            changeSubtotal (Number(document.getElementById('subtotal').innerHTML)) 
+        }
+        function changeSubtotal() {
+            subtotal += price
+            console.log(subtotal)
+            document.getElementById('subtotal').innerHTML= subtotal
+        }
+     
     function addCart() {
-        total = subtotal + tax
+        total = price * tax
         console.log(total)
       document.getElementById('total').innerHTML= total
 
@@ -101,11 +112,13 @@ green.addEventListener('click',function onClick(){
 // }
 // console.log(hamster1)
 
-
+//  total = 0;
+//  let price = 20;
 
    //Get the price of the T-shirt
 //    function addCart() {
+//     let cart_button = document.getElementById('cart_button');
 //     price = Number(cart_button.getAttribute('data-price'));
 //      total = total + price;
-//     document.getElementById('subtotal').innerHTML = total.toFixed();
+//     document.getElementById('total').innerHTML = total.toFixed();;
 // }

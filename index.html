@@ -30,6 +30,9 @@
           </div>
           <div class="col-sm">
             <h1>Customize T-shirt</h1>
+
+            <h5>Price:</h5>
+            <p>$<span id="price">20.00</span></p>
             <p>Text to put on t-shirt</p>
             <input type="text" class="form-control" id="userText" placeholder="Enter text" max="20" oninput="displayText()">  
             <p class="maxNum">max 20 characters</p>
@@ -59,7 +62,7 @@
 
 <!-- add to cart -->
 
-<button id="cart_button" type="button" class="btn btn-primary btn-lg"  data-price="25" onclick="addCart();">Add to cart</button>
+<button id="cart_button" type="button" class="btn btn-primary btn-lg"  data-price="20" onclick="addCart();">Add to cart</button>
 <button type="button" class="btn btn-danger btn-lg">Remove from Cart</button>
           </div>
 
@@ -76,7 +79,7 @@
 </div>
 <div>
     <p>Tax:</p>
-    <p>$<span id="tax">0</span></p>
+    <p>$<span id="tax" data-tax="1.095">0</span></p>
     
 </div>
 <div>
