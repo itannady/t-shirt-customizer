@@ -64,10 +64,10 @@ green.addEventListener('click',function onClick(){
 //Show red error message below Add to Cart button and add .is-invalid class around teh text input to display a red border around it
 //Do not update shopping cart if rules are not met
 
- let subtotal = document.getElementById('subtotal').innerHTML;
- let tax = document.getElementById('tax').getAttribute('data-tax');
- let total = document.getElementById('total').innerHTML; 
- let price = document.getElementById('price').innerHTML
+ let subtotal = parseInt(document.getElementById('subtotal').innerHTML);
+ let tax = parseInt(document.getElementById('tax').innerHTML);
+ let total = parseInt(document.getElementById('total').innerHTML); 
+ let price = parseInt(document.getElementById('price').innerHTML);
 
 //  document.getElementById('cart_button').onclick= function() {
 //       addCart(Number(document.getElementById('subtotal').innerHTML))
@@ -75,18 +75,29 @@ green.addEventListener('click',function onClick(){
 
  //cart_button.getAttribute('data-price')
         document.getElementById('cart_button').onclick =   function () {
-            changeSubtotal (Number(document.getElementById('subtotal').innerHTML)) 
+            changeSubtotal (Number(document.getElementById('subtotal').innerHTML));
+            addTax (Number(document.getElementById('tax').innerHTML));
+            addCart (Number(document.getElementById('total').innerHTML));
         }
         function changeSubtotal() {
             subtotal += price
             console.log(subtotal)
-            document.getElementById('subtotal').innerHTML= subtotal
+            document.getElementById('subtotal').innerHTML= subtotal.toFixed(2);
         }
-     
+
+        // document.getElementById('cart_button').onclick=  function () {
+        // addTax(document.getElementById('tax').innerHTML)
+        // }
+    
+        function addTax() {
+            tax = subtotal * 0.095;
+            document.getElementById('tax').innerHTML = tax.toFixed(2);
+        }
+
     function addCart() {
-        total = price * tax
+        total = subtotal + tax;
         console.log(total)
-      document.getElementById('total').innerHTML= total
+      document.getElementById('total').innerHTML= total.toFixed(2);
 
     }
 
