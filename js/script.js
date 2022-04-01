@@ -85,10 +85,7 @@ green.addEventListener('click',function onClick(){
             document.getElementById('subtotal').innerHTML= subtotal.toFixed(2);
         }
 
-        // document.getElementById('cart_button').onclick=  function () {
-        // addTax(document.getElementById('tax').innerHTML)
-        // }
-    
+      
         function addTax() {
             tax = subtotal * 0.095;
             document.getElementById('tax').innerHTML = tax.toFixed(2);
@@ -101,35 +98,15 @@ green.addEventListener('click',function onClick(){
 
     }
 
-     addCart(total)
+  
 
-// let subtotal = 0;
-// 	let cost = 0;
-// 		//Click = Money
-// 		document.querySelector('#hamster1').onclick= function () {
-// 			cartSubtotal( Number(document.getElementById('ham1').innerHTML))
+     //Remove button 
+        let removeBtn = document.querySelector('#remove_btn').addEventListener('click', function(){
+            // total = null
+            // subtotal = null
+            // tax = null
+            document.getElementById('subtotal').innerHTML= 0;
+            document.getElementById('tax').innerHTML= 0;
+            document.getElementById('total').innerHTML= 0;
+        })
 
-// 		}
-
-// document.querySelector('#hamster1').onclick= function () {
-//     cartSubtotal( Number(document.getElementById('ham1').innerHTML))
-
-// }
-
-// function cartSubtotal(cost){ 
-//     console.log(cost)
-//     subtotal += cost
-//     document.querySelector('#cost').innerHTML= subtotal
-// }
-// console.log(hamster1)
-
-//  total = 0;
-//  let price = 20;
-
-   //Get the price of the T-shirt
-//    function addCart() {
-//     let cart_button = document.getElementById('cart_button');
-//     price = Number(cart_button.getAttribute('data-price'));
-//      total = total + price;
-//     document.getElementById('total').innerHTML = total.toFixed();;
-// }
